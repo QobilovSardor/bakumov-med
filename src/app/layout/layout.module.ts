@@ -6,13 +6,8 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { LayoutRoutingModule } from './layout-routing.module';
 
-const router: Routes=[
-  {
-    path: '',
-    component: LayoutComponent
-  }
-]
 
 @NgModule({
   declarations: [
@@ -20,13 +15,11 @@ const router: Routes=[
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(router),
-
     NzLayoutModule,
     NzIconModule,
     NzBreadCrumbModule,
     NzMenuModule,
-
+		LayoutRoutingModule
   ]
 })
 export class LayoutModule { }
